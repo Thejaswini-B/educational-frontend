@@ -1,0 +1,245 @@
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat&family=Lobster&family=Outfit&family=Poppins&family=Alkatra");
+
+.bg-cont {
+  background-image: url("../public/assets/bg-image1.jpg");
+  background-size: cover;
+  height: 100vh;
+  /* font-family : Roboto ; */
+}
+/* .bg-videos{
+  background-color: whitesmoke;
+  background-size :cover ;
+  height : 100% ; 
+} */
+.logo {
+  border-radius: 80px;
+  height: 60px;
+  width: 60px;
+}
+
+.heading {
+  padding-top: 23px;
+  font-size: 30px;
+}
+.eachCarousel {
+  padding-top: 40px;
+}
+.images {
+  border-radius: 10px;
+  height: 360px;
+}
+
+/* ************************************* */
+/* signup , login */
+.App {
+  text-align: center;
+  padding-top: 40px;
+  gap: 20px;
+  background-color: aquamarine;
+  width: 400px;
+}
+
+.form-container {
+  width: 350px;
+  background: linear-gradient(
+    180deg,
+    rgb(0, 183, 255) 19%,
+    rgb(255, 255, 255) 17%
+  );
+  /* height: 400px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  /* padding-top : 20px;  */
+  gap: 20px;
+  border-radius: 12px;
+}
+
+.form {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+}
+
+.form-container p {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  font-size: 30px;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+}
+.middle {
+  font-size: 30px;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  padding-top: 20px;
+}
+.form-container label {
+  color: rgb(40, 42, 44);
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-size: 15px;
+}
+
+.form-container .input {
+  padding: 10px;
+  height: 35px;
+  border: none;
+  background-color: rgb(224, 231, 236);
+}
+
+.form-container .input:focus {
+  outline: none;
+}
+
+.form-container button {
+  border: none;
+  /* height: 35px; */
+  padding: 10px;
+  width: 50%;
+  border-radius: 15px;
+  margin-top: 30px;
+  background-color: rgb(0, 183, 255);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* sign up form */
+.form-container-signup {
+  width: 350px;
+  background: linear-gradient(
+    180deg,
+    rgb(0, 183, 255) 15%,
+    rgb(255, 255, 255) 14%
+  );
+  /* height: 400px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  /* padding-top : 20px;  */
+  gap: 20px;
+  border-radius: 12px;
+}
+
+.form-signup {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
+}
+
+.form-container-signup p {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  font-size: 30px;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+}
+.middle-signup {
+  font-size: 30px;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  padding-top: 25px;
+}
+.form-container-signup label {
+  color: rgb(40, 42, 44);
+  margin-top: 18px;
+  margin-bottom: 3px;
+  font-size: 15px;
+}
+
+.form-container-signup .input-signup {
+  padding: 10px;
+  height: 35px;
+  border: none;
+  background-color: rgb(224, 231, 236);
+}
+
+.form-container-signup .input-signup:focus {
+  outline: none;
+}
+
+.form-container-signup button {
+  border: none;
+  /* height: 35px; */
+  padding: 10px;
+  width: 50%;
+  border-radius: 15px;
+  margin-top: 30px;
+  background-color: rgb(0, 183, 255);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* ********************************************************************* */
+
+/* Videos displaying grid */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+  padding: 16px;
+}
+
+.video-card {
+  border: 1px solid #e1e4e8;
+  border-radius: 6px;
+  /* padding: 20px;  */
+  margin: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.video-c {
+  padding: 20px;
+}
+
+.follow-us-section {
+  padding-bottom: 130px;
+}
+
+.follow-us-section-heading {
+  text-align: center;
+  color: #183b56;
+  font-family: "Roboto";
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.follow-us-icon-container {
+  background-color: #cce7e9;
+  width: 70px;
+  height: 70px;
+  border-radius: 40px;
+  margin: 15px;
+  padding-top: 22px;
+  padding-bottom: 14px;
+  margin-bottom: 70px;
+  padding-right: 16px;
+  padding-left: 22px;
+}
+
+.icon {
+  /* color: skyblue; */
+  /* color: #4db68b;  */
+  color: rgb(0, 183, 255);
+  font-size: 25px;
+}
+
+.contact_css {
+  background-image: url("../public/assets/bg-image1.jpg");
+  background-size: cover;
+  height: 100vh;
+  /* width:500px; */
+  /* margin-top:50px ; */
+  padding: 180px;
+  border-radius: 12px;
+}

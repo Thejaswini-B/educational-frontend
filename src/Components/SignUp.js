@@ -1,77 +1,70 @@
-import React, { useState } from 'react';
-import {useNavigate,Link} from "react-router-dom" ;
-import axios from "axios" ;
+import React, { useState } from "react";
+import { useNavigate, Link } from "react-router-dom";
+import axios from "axios";
 
 function SignUp() {
   const navigate = useNavigate();
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState(''); 
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [errors, setErrors] = useState([]);
-  const [gender, setGender] = useState('');
-  
+  const [gender, setGender] = useState("");
 
+  const validatePassword = () => {
+    const isValid =
+      /^(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[!@#$%^&*(),.?":{}|<>]).{8,}$/.test(
+        password
+      );
 
-const validatePassword = () => {
-  const isValid =
-    /^(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[!@#$%^&*(),.?":{}|<>]).{8,}$/.test(
-      password
-    );
-
-  if (!isValid) {
-    setErrors([
-      "Password must be at least 8 characters, contain at least one alphabet, one digit, and one special character.",
-    ]);
-  } else {
-    setErrors([]);
-  }
-};
+    if (!isValid) {
+      setErrors([
+        "Password must be at least 8 characters, contain at least one alphabet, one digit, and one special character.",
+      ]);
+    } else {
+      setErrors([]);
+    }
+  };
 
   const handleChange = (e) => {
     setName(e.target.value);
-  }
- 
+  };
 
   const handleGenderChange = (e) => {
     setGender(e.target.value);
-  }
- 
+  };
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
-  }
-  
+  };
 
   const handlePasswordChange = (e) => {
     setPassword(e.target.value);
-  }
- 
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
- 
-    
-    // checking for non-empty fields
-    if (name !== '' && email !== '' && password !== '' && gender !== '' ) {
-       const body = {
-          "name": name ,
-          "email": email ,
-          "password": password ,
-          "gender": gender
 
-  }
+    // checking for non-empty fields
+    if (name !== "" && email !== "" && password !== "" && gender !== "") {
+      const body = {
+        name: name,
+        email: email,
+        password: password,
+        gender: gender,
+      };
       try {
-        const response = await axios.post('http://localhost:3007/signup', body);
+        // const response = await axios.post('http://localhost:3007/signup', body);
+        const response = await axios("http://51.20.103.139:3007/signup", body);
         console.log(response.data);
-        alert('signup successful')
-        setName('')
-        setEmail('')
-        setPassword('')
-        setGender('')
-        navigate('/login');
+        alert("signup successful");
+        setName("");
+        setEmail("");
+        setPassword("");
+        setGender("");
+        navigate("/login");
       } catch (error) {
         console.log(error);
-        alert('signup failed')
+        alert("signup failed");
       }
     }
   };

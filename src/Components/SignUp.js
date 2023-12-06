@@ -53,8 +53,8 @@ function SignUp() {
         gender: gender,
       };
       try {
-        // const response = await axios.post('http://localhost:3007/signup', body);
-        const response = await axios("http://51.20.103.139:3007/signup", body);
+        const response = await axios.post("http://localhost:3007/signup", body);
+
         console.log(response.data);
         alert("signup successful");
         setName("");

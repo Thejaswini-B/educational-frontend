@@ -55,7 +55,7 @@ function SignUp() {
       try {
         // const response = await axios.post("http://localhost:3007/signup", body);
         const response = await axios.post(
-          "http://13.51.235.82:3007/signup",
+          "http://51.20.107.240:3007/signup",
           body
         );
 

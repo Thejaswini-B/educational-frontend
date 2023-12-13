@@ -10,7 +10,7 @@ function Videos() {
   useEffect(() => {
     axios
       // .get("http://localhost:3007/tutorial/videos")
-      .get("http://13.51.235.82:3007/tutorial/videos")
+      .get("http://51.20.107.240:3007/tutorial/videos")
 
       .then((response) => {
         setVideos(response.data.getAllVideosQuery);

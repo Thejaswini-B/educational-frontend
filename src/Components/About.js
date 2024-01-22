@@ -24,7 +24,7 @@ const About = () => {
               interactive modules, we ensure that learning is not just passive
               but also engaging and rewarding. Community Support: Join our
               forums and discussion groups to interact with fellow learners,
-              share resources, and get your queries addressed.
+              share resources, and get the queries addressed.
             </p>
           </div>
         </div>
